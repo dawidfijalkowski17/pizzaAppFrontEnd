@@ -1,0 +1,221 @@
+<nav class="navbar navbar-expand-lg navbar-light py-0 navbar-height-setting">
+  <div class="container-fluid">
+
+    <a class="navbar-brand py-0" routerLink=''>
+
+      <h1><span class="logo">Pizza- Fijalkowski </span></h1>
+    </a>
+   
+
+
+    <div class="user-and-item justify-content-end py-0 p-4">
+      <div class="navbar-items">
+
+        <a class="nav-link-user" aria-current="page" (click)="toRegister()" [routerLink]="['register']"
+          title="Zaloguj się lub utwórz konto" *ngIf="!isLoggedUser">
+          <i class="far fa-user"></i>
+        </a>
+
+        <a class="nav-link-user" aria-current="page" [routerLink]="['pay']" title="Koszyk" *ngIf="isLoggedUser">
+          <i class="fas fa-shopping-basket"></i>
+          <label ID="lblCartCount" runat="server" CssClass="badge badge-warning" ForeColor="White">{{cartTotal}}
+            zł.</label>
+        </a>
+
+        <a class="nav-link-user" aria-current="page" *ngIf="isLoggedUser" title="Wyloguj" (click)="logOut()">
+          <i class="fas fa-sign-in-alt"></i>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</nav>
+<app-menu-list></app-menu-list>
+<div class="slider-content">
+  <ngb-carousel>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img src="../../assets/img/pizza-wallpaper.jpg" alt="Random first slide">
+      </div>
+      <div class="carousel-caption">
+        <h3 class="text-uppercase">Nie czekaj! Zamów u nas przepyszną Margherite</h3>
+        <p class="text-uppercase">Przy zakupie dwóch pizz- trzecia gratis!</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img src="../../assets/img/first.jpg" style="filter: brightness(70%)" alt="Random second slide">
+      </div>
+      <div class="carousel-caption">
+        <h3 class="text-uppercase">Dowozy do 10km GRATIS!</h3>
+        <p class="text-uppercase">Do 10 kilometrów dowozimy za darmo. Przy zamówieniu powyżej 100 zł dowieziemy nawet do
+          30 kilometrów!</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>
+<section class="main-offerts">
+  <div class="ofert-section">
+    <div class="container">
+      <div class="row">
+        <h2 class="title-top">Oferty dla Ciebie:</h2>
+        <ul *ngIf="pizzas" class="list-inline">
+          <li *ngFor="let pizza of popularPizzas" class="list-inline-item" [routerLink]="['/home/card']" routerLinkActive="router-link-active">
+            <div class="card mb-4 box-shadow">
+              <img class="card-img-top" src="../../assets/img/first.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">{{ pizza.name }}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="desc">
+                    {{ pizza.description }}
+                  </div>
+                  <small class="text-muted">{{ pizza.price | currency: 'PLN'}}</small>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <h6 (click)="getAllPizzaOptions()">Pokaż więcej</h6>
+      </div>
+    </div>
+  </div>
+
+</section>
+<section class="main-offerts-two" *ngIf="clickForMoreOptions">
+  <div class="ofert-section">
+    <div class="container">
+      <div class="row pb-5">
+        <ul *ngIf="pizzas" class="list-inline">
+          <li *ngFor="let pizza of pizzas" class="list-inline-item" [routerLink]="['/home/card']" routerLinkActive="router-link-active">
+            <div class="card mb-4 box-shadow">
+              <img class="card-img-top" src="../../assets/img/first.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">{{ pizza.name }}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="desc">
+                    {{ pizza.description }}
+                  </div>
+                  <small class="text-muted">{{ pizza.price | currency: 'PLN'}}</small>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</section>
+<router-outlet id="register"></router-outlet>
+
+<!-- contact part-->
+<div class="about-data-section">
+  <div class="about-data">
+
+    <div class="icon">
+      <i class="fas fa-map-marker-alt"></i>
+    </div>
+    
+    <div class="data-header">  
+      <h3>Gdzie jesteśmy ?</h3>
+      <p class="data">
+          Restauracja PizzaApp
+          <br>
+          al. Tysiąclecia Państwa Polskiego 7 
+          <br>
+          25-314 Kielce
+      </p>
+    </div>
+
+  </div>
+  <div class="about-data">
+    
+    <div class="icon">
+      <i class="fas fa-phone-volume"></i>
+    </div>
+
+    <div class="data-header"> 
+      <h3>Zadzwoń do nas </h3>
+      <div class="data">
+          Telefon:  <a href="tel:987654321">987-***-321</a>
+      </div>
+    </div>
+  </div>
+  <div class="about-data">
+    
+    <div class="icon">
+      <i class="far fa-clock"></i>
+    </div>
+    <div class="data-header"> 
+      <h3>Godziny otwarcia</h3>
+      <ul>
+          <li>
+              poniedziałek-piątek 13:00 - 22:00
+          </li>
+          <li>
+              sobota-niedziela 13:00 - 24:00
+        </li>
+          
+      </ul>
+      </div>
+  </div>
+  <div class="about-data">
+
+    <div class="icon">
+      <i class="fas fa-pizza-slice"></i>
+    </div>
+
+    <div class="data">
+      <h3>Zamów online</h3>
+      <h5 style="cursor: pointer;" [routerLink]="['/shoppingcart']" routerLinkActive="router-link-active">Złóż zamówienie</h5>
+    </div>
+  </div>
+  <div id="clear"></div>
+</div>
+<footer>
+  <div class="container bg">
+    <div class="row">
+      <div class="col-md-4 text-center text-uppercase py-4">
+        <p class="footer-headline">Wykorzystane technologie</p>
+        <ul>
+          <li>
+            HTML 5
+          </li>
+          <li>
+            CSS
+          </li>
+          <li>
+            JavaScript
+          </li>
+          <li>
+            Angular
+          </li>
+          <li>
+            Spring Boot
+          </li>
+          <li>
+            MongoDB
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4 text-center py-4">
+        <p class="footer-headline">Autorzy projektu</p>
+        <ul>
+          <li>
+            Dawid Fijałkowski
+          </li>
+          
+        </ul>
+      </div>
+      <div class="col-md-4 text-center  py-4">
+        <p class="footer-headline">Informacje o stronie</p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate dolorum earum repudiandae? Quos ut quae porro
+        quod exercitationem reprehenderit debitis, sint nisi suscipit, fuga, quisquam doloremque autem. Recusandae,
+        pariatur praesentium.
+      </div>
+    </div>
+    <div class="row text-center">
+      <p class="cpy">Projekt PŚK &copy;</p>
+    </div>
+  </div>
+</footer>

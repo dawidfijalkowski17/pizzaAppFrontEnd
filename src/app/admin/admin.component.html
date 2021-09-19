@@ -1,0 +1,12 @@
+<h1 class="display-4 text-center">Zarządzanie Pizzą</h1>
+<nav class="navbar navbar-light bg-light">
+  <form class="container-fluid justify-content-center">
+    <button class="btn btn-outline-success me-3" routerLink="list">Lista Pizz</button>
+    <button class="btn btn-outline-success me-3" routerLink="create">Dodaj Pizze</button>
+    <button class="btn btn-outline-success me-3" routerLink="order">Zamówienia</button>
+    <button class="btn btn-outline-success me-3" [routerLink]="['']">Wróć</button>
+  </form>
+
+</nav>
+
+<router-outlet></router-outlet>

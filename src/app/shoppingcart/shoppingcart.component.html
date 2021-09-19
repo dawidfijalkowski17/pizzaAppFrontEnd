@@ -1,0 +1,103 @@
+<nav class="navbar navbar-expand-lg navbar-light py-0 navbar-height-setting">
+    <div class="container-fluid">
+
+        <a class="navbar-brand py-0" routerLink=''>
+
+            <h1><span class="logo">Pizza- Fijalkowski </span></h1>
+          </a>
+
+        <div class="user-and-item justify-content-end py-0 p-4">
+            <div class="navbar-items">
+
+                <a class="nav-link-user" aria-current="page" [routerLink]="['/home/register']"
+                    title="Zaloguj się lub utwórz konto" *ngIf="!isLoggedUser">
+                    <i class="far fa-user"></i>
+                </a>
+
+                <a class="nav-link-user" aria-current="page" [routerLink]="['/home/pay']" title="Koszyk"
+                    *ngIf="isLoggedUser">
+                    <i class="fas fa-shopping-basket"></i>
+                    <label ID="lblCartCount" runat="server" CssClass="badge badge-warning"
+                        ForeColor="White">{{cartTotal}} zł.</label>
+                </a>
+
+                <a class="nav-link-user" aria-current="page" *ngIf="isLoggedUser" title="Wyloguj" (click)="logOut()"
+                    [routerLink]="['/home']">
+                    <i class="fas fa-sign-in-alt"></i>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</nav>
+<app-menu-list></app-menu-list>
+<div class="spacing my-5"></div>
+<div class="row">
+    <div class="col-md-2">
+        <app-filters></app-filters>
+    </div>
+    <div class="col-md-8">
+        <app-product-list></app-product-list>
+    </div>
+    <div class="col">
+        <app-cart></app-cart>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 text-center text-uppercase py-4">
+                <p class="footer-headline">Wykorzystane technologie</p>
+                <ul>
+                    <li>
+                        HTML 5
+                    </li>
+                    <li>
+                        CSS
+                    </li>
+                    <li>
+                        JavaScript
+                    </li>
+                    <li>
+                        Angular
+                    </li>
+                    <li>
+                        Node.JS
+                    </li>
+                    <li>
+                        MongoDB
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 text-center py-4">
+                <p class="footer-headline">Autorzy projektu</p>
+                <ul>
+                    <li>
+                        Dawid Fijałkowski
+                    </li>
+                    <li>
+                        Dawid Milewski
+                    </li>
+                    <li>
+                        Daniel Ostrowski
+                    </li>
+                    <li>
+                        Jakub Prusicki
+                    </li>
+                    <li>
+                        Weronika Wolszczak
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 text-center  py-4">
+                <p class="footer-headline">Informacje o stronie</p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate dolorum earum repudiandae? Quos ut
+                quae porro quod exercitationem reprehenderit debitis, sint nisi suscipit, fuga, quisquam doloremque
+                autem. Recusandae, pariatur praesentium.
+            </div>
+        </div>
+        <div class="row text-center">
+            <p class="cpy">Projekt PŚK &copy;</p>
+        </div>
+    </div>
+</footer>

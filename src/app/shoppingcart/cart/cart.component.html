@@ -1,0 +1,17 @@
+<div *ngIf="cartItems.length === 0" class="alert alert-info mr-3">Koszyk pusty.</div>
+
+<ul *ngIf="cartItems.length > 0" class="list-group mr-3">
+    <li class="list-group-item" *ngFor="let item of cartItems">
+        <app-cart-item [cartItem]="item"></app-cart-item>
+    </li>
+
+    <li class="list-group-item active">
+        <strong>Koszt: </strong>{{ cartTotal | currency: 'PLN'}}
+    </li>
+    <li class="list-group-item text-center make-order" [routerLink]="['/home/pay']">
+        <strong>Zapłać</strong>
+    </li>
+    <li class="list-group-item text-center make-order" (click)="clearBasket()">
+        <strong>Wyczyść</strong>
+    </li>
+</ul>

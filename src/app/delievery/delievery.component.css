@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+
+.navbar-brand h1{
+    font-family: 'Style Script', cursive;
+}
+
+
+@media screen and (max-width: 500px) {
+    .navbar-brand h1{
+        display: none;
+    }
+}
+
+nav{
+    height: 80px;
+}
+
+nav{
+    border-bottom: 1px solid rgba(97, 97, 97, .4);
+}
+
+footer{
+    width: 100%;
+    margin-top: 6rem;
+    background: whitesmoke;
+}
+.footer-headline{
+    font-weight: 700;
+}
+
+.spacing{
+    margin-top: 5rem;
+    width: 100%;
+    height: 1px;
+}
+footer ul {
+    list-style: none;
+    padding-left: 0!important;
+}
+
+footer ul li{
+    padding-bottom: .2rem;
+}
+
+.footer-rights{
+    width: 100%;
+    background-color: black;
+}
+
+.cpy{
+    font-size: .7rem;
+}
+
+.fa-user,
+.fa-shopping-basket,
+.fa-sign-in-alt
+{
+    color: black;
+    font-size: 1.6em;
+    padding-right: 1em;
+    margin-top: .3rem;
+    transition: color .5s;
+    cursor: pointer;
+}
+
+.fa-shopping-cart{
+    color: black;
+    font-size: 1.4em;
+    padding-right: 1em;
+    transition: color .5s;
+}
+
+
+.header{background:rgb(0, 178, 255);color:#fff;}
+#lblCartCount {
+    font-size: 12px;
+    background: #ff0000;
+    color: #fff;
+    padding: 0 5px;
+    vertical-align: top;
+    margin-right: 20px;
+    margin-left: -20px;
+}
+
+.img-wrap{
+    background: url('../../assets/img/registerwallpaper.jpg') center fixed;
+    border-radius: 30px;
+    background-size: cover;
+    height: 700px;
+    margin-top: 3rem;
+}
+
+.login-label{
+    color: floralwhite;
+}
+
+.container{
+    text-align: center;
+}
+
+.row{
+    padding-top: 50px;
+}
+
+.form-group{
+    padding-top: 12px;
+}
+
+.btn-primary{
+    margin-top: 30px;
+    background-color: rgb(212, 149, 65);
+    border-color: rgb(109, 107, 107);
+    color: rgb(255, 255, 255);
+    width: 200px;
+    height: 150;
+}

@@ -1,0 +1,20 @@
+<h1 class="display-6 text-center">Lista aktualnych pizz</h1>
+<table class="table text-center">
+    <thead>
+      <tr>
+        <th scope="col">Nazwa Pizzy</th>
+        <th scope="col">Opis Pizzy</th>
+        <th scope="col">Cena</th>
+        <th scope="col">Opcje</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let pizza of pizzas">
+      <tr>
+        <td>{{pizza.name}}</td>
+        <td>{{pizza.description}}</td>
+        <td>{{pizza.price}}</td>
+        <td> <button type="button" class="btn btn-dark mr-3" (click)="getPizzaId(pizza.id)" [routerLink]="['/home/admin/edit']">Edytuj</button>
+          <button type="button" (click)="delete(pizza.id)" class="btn btn-danger mr-0">Usuń</button></td>
+      </tr>
+    </tbody>
+  </table>

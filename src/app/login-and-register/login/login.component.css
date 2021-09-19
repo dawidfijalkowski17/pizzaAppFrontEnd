@@ -1,0 +1,68 @@
+.register-section{
+    background-color: white;
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+    padding-left: .7rem;
+    padding-right: .7rem;
+}
+
+.go-back{
+    float: right;
+}
+
+.register{
+    height: 100vh;
+
+}
+
+.lg-form{
+    background-color: white;
+    padding-right: 1em;
+    padding-left: 1em;
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+    min-height: 500px;
+    border-radius: 5px;
+    min-width: 300px;
+}
+
+.img-wrap{
+    background: url('../../../assets/img/registerwallpaper.jpg') center fixed;
+    border-radius: 30px;
+    background-size: cover;
+    min-width: 300px;
+}
+
+.slider{
+    width: 100%;
+}
+
+.back-to-register{
+    float: right;
+}
+
+.login-to-continue{
+    font-weight: 700;
+    margin-top: 1rem;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
+
+button{
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.signin-button{
+    margin-top: 15px;
+    height: 40px;
+   
+}
+
+.create-account{
+    text-decoration: none;
+    float: right;
+    color: black;
+}

@@ -1,0 +1,201 @@
+<nav class="navbar navbar-expand-lg navbar-light py-0 navbar-height-setting">
+  <div class="container-fluid">
+
+    <a class="navbar-brand py-0" routerLink=''>
+
+      <h1><span class="logo">Pizza- Fijalkowski</span></h1>
+    </a>
+
+    <div class="user-and-item justify-content-end py-0 p-4">
+      <div class="navbar-items">
+
+        <a class="nav-link-user" aria-current="page" *ngIf="!isLoggedUser">
+          <i class="far fa-user"></i>
+        </a>
+
+        <a class="nav-link-user" aria-current="page" [routerLink]="['pay']" title="Koszyk" *ngIf="isLoggedUser">
+          <i class="fas fa-shopping-basket"></i>
+          <label ID="lblCartCount" runat="server" CssClass="badge badge-warning" ForeColor="White">{{cartTotal}}
+            zł.</label>
+        </a>
+
+        <a class="nav-link-user" aria-current="page" *ngIf="isLoggedUser" title="Wyloguj" (click)="logOut()">
+          <i class="fas fa-sign-in-alt"></i>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</nav>
+<app-menu-list></app-menu-list>
+
+<br><br><br>
+<!----- KOMENTARZ ^^^^^MENU^^^^------->
+<div class="slider-content">
+  <ngb-carousel>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img src="../../assets/img/pizza-wallpaper.jpg" alt="Random first slide">
+      </div>
+      <div class="carousel-caption">
+        <h3 class="text-uppercase">Nie czekaj! Zamów u nas przepyszną Margherite</h3>
+        <p class="text-uppercase">Przy zakupie dwóch pizz- trzecia gratis!</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img src="../../assets/img/first.jpg" style="filter: brightness(70%)" alt="Random second slide">
+      </div>
+      <div class="carousel-caption">
+        <h3 class="text-uppercase">Dowozy do 10km GRATIS!</h3>
+        <p class="text-uppercase">Do 10 kilometrów dowozimy za darmo. Przy zamówieniu powyżej 100 zł dowieziemy nawet do
+          30 kilometrów!</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>
+<!----- KOMENTARZ vvvslidervvvv------->
+
+
+<div id="nav-contact">
+  <div class="nav-info">
+    <h4>Masz pytania? </h4>
+  </div>
+  <div class="nav-info">
+    <h1>Skontaktuj się z nami </h1>
+  </div>
+  <div class="nav-info">
+    <h6>Napisz lub zadzwoń do nas!</h6>
+  </div>
+</div>
+
+<div class="about-data-section">
+  <div class="about-data">
+
+    <div class="icon">
+      <i class="fas fa-home"></i>
+    </div>
+
+    <div class="data-header">
+      <h3>Dane adresowe</h3>
+      <p class="data">
+        Restauracja PizzaApp
+        <br>
+        al. Tysiąclecia Państwa Polskiego 7
+        <br>
+        25-314 Kielce
+      </p>
+    </div>
+
+  </div>
+  <div class="about-data">
+
+    <div class="icon">
+      <i class="fas fa-phone-alt"></i>
+    </div>
+
+    <div class="data-header">
+      <h3>Dane kontaktowe</h3>
+      <div class="data">
+        Telefon: <a href="tel:987654321">987-***-321</a>
+      </div>
+    </div>
+  </div>
+  <div class="about-data">
+
+    <div class="icon">
+      <i class="far fa-clock"></i>
+    </div>
+    <div class="data-header">
+      <h3>Godziny otwarcia</h3>
+      <ul>
+        <li>
+          poniedziałek-piątek 13:00 - 22:00
+      </li>
+      <li>
+          sobota-niedziela 13:00 - 24:00
+    </li>
+      </ul>
+    </div>
+  </div>
+  <div class="about-data">
+
+    <div class="icon">
+      <i class="fas fa-truck"></i>
+    </div>
+
+    <div class="data-header">
+      <h3>Godziny dostawy</h3>
+      <ul>
+        <li>
+          poniedziałek-piątek 13:00 - 21:00
+      </li>
+      <li>
+          sobota-niedziela 13:00 - 23:00
+    </li>
+      </ul>
+    </div>
+  </div>
+  <div id="clear"></div>
+</div>
+
+<!------  KOMENTARZ  vvvv mapy google vvvv ---------->
+
+
+<br><br>
+<h2 class="here" style="text-align: center; margin-top: 20px;">Mapa dojazdu</h2>
+<br><br>
+<router-outlet id="register"></router-outlet>
+<div class="container-to-map">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2517.4276135388836!2d20.637867015963725!3d50.87879556428818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471827be35849801%3A0x99149978917cac90!2sPolitechnika%20%C5%9Awi%C4%99tokrzyska!5e0!3m2!1spl!2spl!4v1622442695894!5m2!1spl!2spl"
+    frameborder="0" style="border:0;" allowfullscreen="true" aria-hidden="false" tabindex="0"></iframe>
+</div>
+<!------  KOMENTARZ  ^^^^^ mapy google ^^^^^ ---------->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 text-center text-uppercase py-4">
+        <p class="footer-headline">Wykorzystane technologie</p>
+        <ul>
+          <li>
+            HTML 5
+          </li>
+          <li>
+            CSS
+          </li>
+          <li>
+            JavaScript
+          </li>
+          <li>
+            Angular
+          </li>
+          <li>
+            Spring Boot
+          </li>
+          <li>
+            MongoDB
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4 text-center py-4">
+        <p class="footer-headline">Autorzy projektu</p>
+        <ul>
+          <li>
+            Dawid Fijałkowski
+          </li>
+          
+        </ul>
+      </div>
+      <div class="col-md-4 text-center  py-4">
+        <p class="footer-headline">Informacje o stronie</p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate dolorum earum repudiandae? Quos ut quae porro
+        quod exercitationem reprehenderit debitis, sint nisi suscipit, fuga, quisquam doloremque autem. Recusandae,
+        pariatur praesentium.
+      </div>
+    </div>
+    <div class="row text-center">
+      <p class="cpy">Projekt PŚK &copy;</p>
+    </div>
+  </div>
+</footer>

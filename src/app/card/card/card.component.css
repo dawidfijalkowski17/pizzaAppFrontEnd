@@ -1,0 +1,54 @@
+button{
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.pay{
+    height: 100%;
+    min-height: 100vh;
+    background:  url('../../../assets/img/pizza-wallpaper.jpg') no-repeat fixed;
+    background-size: cover;
+    color: white;
+}
+
+.container{
+    padding-top: 5rem;
+}
+
+google-pay-button{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.disabled{
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.gp-btn{
+    width: 100%;
+}
+
+strong{
+    color: black;
+}
+
+.price{
+    color: #fff;
+}
+
+li{
+    color: black;
+}
+
+.headline{
+    margin-top: 4.5rem;
+}
+
+.make-order{
+    cursor: pointer;
+}
+
+.list-group{
+    margin-top: 1.5rem;
+}

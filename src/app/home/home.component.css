@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+
+
+.fa-user,
+.fa-shopping-basket,
+.fa-sign-in-alt
+{
+    color: black;
+    font-size: 1.6em;
+    padding-right: 1em;
+    margin-top: .3rem;
+    transition: color .5s;
+    cursor: pointer;
+}
+
+.fa-shopping-cart{
+    color: black;
+    font-size: 1.4em;
+    padding-right: 1em;
+    transition: color .5s;
+}
+
+.fa-user:hover,
+.fa-shopping-basket:hover,
+.fa-sign-in-alt:hover
+.fa-shopping-cart:hover{
+    color: red;
+}
+
+.title-top{
+    margin-top: 12rem!important;
+    margin-bottom: 3rem!important;
+    font-size: 3rem!important;
+    color: rgb(22, 21, 21);
+    text-align: left;
+}
+
+.picsum-img-wrapper img{
+    width: 100%;
+    height: 450px;
+    filter: brightness(100%);
+    transition: filter .5s;
+}
+
+.picsum-img-wrapper img:hover{
+    filter: brightness(80%);
+}
+
+.picsum-img-wrapper{
+    outline: none;
+}
+
+ngb-carousel{
+    width: 100%;
+}
+
+ngb-carousel:focus{
+    outline: none;
+    border: 0;
+}
+
+h3{
+    font-size: 2em;
+}
+
+.carousel-caption p{
+    font-size: 1.4em;
+}
+
+.text-slider{
+    justify-content: center;
+    text-align: center;
+}
+
+.slider{
+    font-size: 1em!important;
+    font-weight: 500;
+}
+
+.navbar-brand h1{
+    font-family: 'Style Script', cursive;
+}
+
+
+@media screen and (max-width: 500px) {
+    .navbar-brand h1{
+        display: none;
+    }
+}
+
+
+nav{
+    border-bottom: 1px solid rgba(97, 97, 97, .4)
+}
+
+.main-page{
+    height: 50rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-content{
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+}
+
+.shadow{
+    text-shadow: 2px 2px 15px black;
+}
+
+
+.main-offerts, .main-offerts-two{
+    background-color: whitesmoke;
+    height: 100%;
+    padding-bottom: 1rem;
+}
+
+.offer-box{
+    margin-top: 7rem;
+    height: 350px;
+    border-radius: 15px;
+    padding: 2rem;
+    background: url("../../assets/img/login.jpg") center fixed;
+    background-size: cover;
+    filter: brightness(100%);
+    transition: filter .5s; 
+    cursor: pointer;
+}
+
+.title{
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    transition: font-size .5s;
+    margin-top: 5rem;
+    background: none;
+}
+
+
+.item{
+    min-width: 350px;
+}
+
+
+.offer-box:hover{
+    border: 2px solid white;
+    filter: brightness(90%);
+}
+
+.offer-box:hover .title{
+    font-size: 3.2rem;
+
+}
+
+@media only screen and (max-width: 600px) {
+    .offer-box{
+      min-width: 300px;  
+  
+    }
+
+    .col{
+        padding-top: 1rem;
+    }
+  }
+footer{
+        padding-top: 8rem;
+      width: 100%;
+      background: whitesmoke
+  }
+.footer-headline{
+      font-weight: 700;
+  }
+
+  footer ul {
+      list-style: none;
+      padding-left: 0!important;
+  }
+
+  footer ul li{
+      padding-bottom: .2rem;
+  }
+
+  .footer-rights{
+      width: 100%;
+      background-color: black;
+  }
+
+  .cpy{
+      font-size: .7rem;
+  }
+
+  
+.header{background:rgb(0, 178, 255);color:#fff;}
+#lblCartCount {
+    font-size: 12px;
+    background: #ff0000;
+    color: #fff;
+    padding: 0 5px;
+    vertical-align: top;
+    margin-right: 20px;
+    margin-left: -20px;
+}
+
+
+.card{
+    width: 300px;
+    height: 400px;
+    cursor: pointer;
+}
+
+.card:hover{
+    border: 1px solid rgb(53, 52, 52);
+}
+
+.card img{
+    height: 150px;
+}
+
+.card-text{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+}
+
+.text-muted{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1rem;
+}
+.desc{
+    margin-top: 1rem;
+}
+
+li{
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+h6 {
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding-bottom: 5rem;
+  }
+  h6:before, h6:after{
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid;
+    margin: auto;
+  }
+  h6:before {
+    margin-right: 10px
+  }
+  h6:after {
+    margin-left: 10px
+  }
+
+  a:link
+  {
+     color: rgb(98, 98, 98);
+     text-decoration: none;
+  }
+  /*nie robić a:visited !!!! */
+  
+  a:hover
+  {
+     color: rgb(199, 31, 59); 
+  }
+  
+  a:active
+  {
+     color: red;
+  }
+
+#nav-contact{
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+#clear{
+    clear:both;
+}
+
+#komentarz{
+    font-size: 14px;;
+}
+
+.about-data{
+    min-height: 300px;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    padding: 2rem;
+    font-size: 17px;
+}
+
+.about-data-section{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.about-data-section ul{
+    list-style: none;
+    font-size: 17px;
+}
+
+.data{
+    font-size: 17px;
+}
+
+.icon{
+    font-size: 40px;
+    color: goldenrod;
+}
+

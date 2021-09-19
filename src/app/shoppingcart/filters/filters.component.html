@@ -1,0 +1,28 @@
+<div class="card ml-3 filters">
+    <div class="card-header">
+        <strong>Filtry</strong>
+    </div>
+    <div class="card-body">
+        <form>
+            <div class="form-group">
+                <label for="form">Nazwa:</label>
+                <input type="text" [(ngModel)]="searchName" name="name" class="form-control" (ngModelChange)="filter()">
+            </div>
+            <hr>
+            <div class="form-group">
+                <label for="from">From</label>
+                <input type="number" id="from" class="form-control" [(ngModel)]="searchPrice" name="from"
+                    (ngModelChange)="filter()">
+            </div>
+
+            <div class="form-group">
+                <label for="to">To</label>
+                <input type="number" id="to" class="form-control" [(ngModel)]="searchTo" (ngModelChange)="filter()"
+                    name="to">
+            </div>
+            <hr>
+            <button class="btn btn-primary btn-block btn-sm" (ngModelChange)="filter()">Pokaż</button>
+        </form>
+
+    </div>
+</div>

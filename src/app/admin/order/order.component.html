@@ -1,0 +1,21 @@
+<h1 class="display-6 text-center">Lista aktualnych zamówień</h1>
+<table class="table text-center">
+    <thead>
+      <tr>
+        <th scope="col">Imie i Nazwisko Zamawiającego</th>
+        <th scope="col">Adres Zamawiającego</th>
+        <th scope="col">Cena Zamówienia</th>
+        <th scope="col">Zamówienie</th>
+        <th scope="col">Opcje</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let order of orders">
+      <tr>
+        <td>{{order.name}} {{order.surname}}</td>
+        <td>{{order.city}} {{order.post_code}} {{order.street}} {{order.houseNumber}}</td>
+        <td>{{order.price}}</td>
+        <td>{{order.content}}</td>
+        <td> <button type="button" (click)="delete(order.id)" class="btn btn-danger mr-0">Usuń</button></td>
+      </tr>
+    </tbody>
+  </table>
